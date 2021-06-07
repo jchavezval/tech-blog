@@ -15,12 +15,9 @@ Post.init(
         type: DataTypes.STRING,
         allowNull: false
       },
-      post_url: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          isURL: true
-        }
+      content: {
+        type: DataTypes.TEXT,
+        allowNull: false
       },
       user_id: {
         type: DataTypes.INTEGER,
@@ -36,6 +33,6 @@ Post.init(
       underscored: true,
       modelName: 'post'
     }
-  );
+);
   
-  module.exports = Post;
+module.exports = Post;
